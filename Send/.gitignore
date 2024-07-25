@@ -1,0 +1,8 @@
+# dotnet core console application 
+bin/
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/

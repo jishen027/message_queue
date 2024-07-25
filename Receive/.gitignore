@@ -1,0 +1,5 @@
+# dotnet console program
+bin/
+
+# Visual Studio Code
+.vscode/
