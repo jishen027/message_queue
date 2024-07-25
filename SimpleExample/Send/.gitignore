@@ -1,5 +1,6 @@
 # dotnet core console application 
 bin/
+obj/
 
 # Visual Studio Code
 .vscode/
