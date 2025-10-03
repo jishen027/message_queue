@@ -23,10 +23,13 @@ var message = GetMessage(args);
 // Convert the message to a byte array
 var body = Encoding.UTF8.GetBytes(message);
 
+var properties = channel.CreateBasicProperties();
+properties.Persistent = true; // Make message persistent
+
 // Publish the message to the queue, parameters are: exchange, routingKey, basicProperties, body
 channel.BasicPublish(exchange: "",
                      routingKey: "task_queue",
-                     basicProperties: null,
+                     basicProperties: properties,
                      body: body);
 
 Console.WriteLine(" [x] Sent {0}", message);
